@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB44EA511F8D5A150041E45E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44EA501F8D5A150041E45E /* Restaurant.swift */; };
 		AB8085FD1F8BECB300460585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8085FC1F8BECB300460585 /* AppDelegate.swift */; };
 		AB8086021F8BECB300460585 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8086001F8BECB300460585 /* Main.storyboard */; };
 		AB8086041F8BECB300460585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB8086031F8BECB300460585 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB44EA501F8D5A150041E45E /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		AB8085F91F8BECB300460585 /* Foodiez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodiez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8085FC1F8BECB300460585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB8086011F8BECB300460585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				AB80863D1F8D283200460585 /* Review.swift */,
 				AB8086431F8D394900460585 /* MenuItem.swift */,
+				AB44EA501F8D5A150041E45E /* Restaurant.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB44EA511F8D5A150041E45E /* Restaurant.swift in Sources */,
 				AB8086441F8D394900460585 /* MenuItem.swift in Sources */,
 				AB8085FD1F8BECB300460585 /* AppDelegate.swift in Sources */,
 				AB80863E1F8D283200460585 /* Review.swift in Sources */,
