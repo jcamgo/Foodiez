@@ -13,6 +13,7 @@
 		AB8086071F8BECB300460585 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8086051F8BECB300460585 /* LaunchScreen.storyboard */; };
 		AB80863E1F8D283200460585 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80863D1F8D283200460585 /* Review.swift */; };
 		AB8086421F8D2A2F00460585 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8086411F8D2A2F00460585 /* CloudKit.framework */; };
+		AB8086441F8D394900460585 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8086431F8D394900460585 /* MenuItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		AB80863D1F8D283200460585 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		AB80863F1F8D2A2B00460585 /* Foodiez.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Foodiez.entitlements; sourceTree = "<group>"; };
 		AB8086411F8D2A2F00460585 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		AB8086431F8D394900460585 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				AB80863D1F8D283200460585 /* Review.swift */,
+				AB8086431F8D394900460585 /* MenuItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8086441F8D394900460585 /* MenuItem.swift in Sources */,
 				AB8085FD1F8BECB300460585 /* AppDelegate.swift in Sources */,
 				AB80863E1F8D283200460585 /* Review.swift in Sources */,
 			);
