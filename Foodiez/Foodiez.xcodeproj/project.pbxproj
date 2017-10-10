@@ -8,20 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		AB8085FD1F8BECB300460585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8085FC1F8BECB300460585 /* AppDelegate.swift */; };
-		AB8085FF1F8BECB300460585 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8085FE1F8BECB300460585 /* ViewController.swift */; };
 		AB8086021F8BECB300460585 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8086001F8BECB300460585 /* Main.storyboard */; };
 		AB8086041F8BECB300460585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB8086031F8BECB300460585 /* Assets.xcassets */; };
 		AB8086071F8BECB300460585 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8086051F8BECB300460585 /* LaunchScreen.storyboard */; };
+		AB80863E1F8D283200460585 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80863D1F8D283200460585 /* Review.swift */; };
+		AB8086421F8D2A2F00460585 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8086411F8D2A2F00460585 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB8085F91F8BECB300460585 /* Foodiez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodiez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8085FC1F8BECB300460585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AB8085FE1F8BECB300460585 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB8086011F8BECB300460585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB8086031F8BECB300460585 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB8086061F8BECB300460585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB8086081F8BECB300460585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB80863D1F8D283200460585 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		AB80863F1F8D2A2B00460585 /* Foodiez.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Foodiez.entitlements; sourceTree = "<group>"; };
+		AB8086411F8D2A2F00460585 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8086421F8D2A2F00460585 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 			children = (
 				AB8085FB1F8BECB300460585 /* Foodiez */,
 				AB8085FA1F8BECB300460585 /* Products */,
+				AB8086401F8D2A2F00460585 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +59,47 @@
 		AB8085FB1F8BECB300460585 /* Foodiez */ = {
 			isa = PBXGroup;
 			children = (
+				AB80863F1F8D2A2B00460585 /* Foodiez.entitlements */,
 				AB8085FC1F8BECB300460585 /* AppDelegate.swift */,
-				AB8085FE1F8BECB300460585 /* ViewController.swift */,
-				AB8086001F8BECB300460585 /* Main.storyboard */,
-				AB8086031F8BECB300460585 /* Assets.xcassets */,
-				AB8086051F8BECB300460585 /* LaunchScreen.storyboard */,
-				AB8086081F8BECB300460585 /* Info.plist */,
+				AB80863C1F8D27F500460585 /* Models */,
+				AB80863B1F8D27E500460585 /* Storyboards */,
+				AB80863A1F8D27B700460585 /* Resources */,
 			);
 			path = Foodiez;
+			sourceTree = "<group>";
+		};
+		AB80863A1F8D27B700460585 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB8086081F8BECB300460585 /* Info.plist */,
+				AB8086031F8BECB300460585 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AB80863B1F8D27E500460585 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AB8086051F8BECB300460585 /* LaunchScreen.storyboard */,
+				AB8086001F8BECB300460585 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AB80863C1F8D27F500460585 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB80863D1F8D283200460585 /* Review.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AB8086401F8D2A2F00460585 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB8086411F8D2A2F00460585 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +135,14 @@
 					AB8085F81F8BECB300460585 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -136,8 +182,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB8085FF1F8BECB300460585 /* ViewController.swift in Sources */,
 				AB8085FD1F8BECB300460585 /* AppDelegate.swift in Sources */,
+				AB80863E1F8D283200460585 /* Review.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,9 +320,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Foodiez/Foodiez.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FAFF4GC6NK;
-				INFOPLIST_FILE = Foodiez/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jonny.Foodiez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,9 +336,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Foodiez/Foodiez.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FAFF4GC6NK;
-				INFOPLIST_FILE = Foodiez/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jonny.Foodiez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
