@@ -19,6 +19,8 @@ struct Review {
     
 }
 
+// MARK: - CloudKit
+
 extension Review {
     
     static let summaryKey = "summary"
@@ -42,5 +44,21 @@ extension Review {
     
     var CKRepresentation: CKRecord {
         let record = CKRecord(recordType: Review.recordType, recordID: recordID)
+        
+        record.setValue(summary, forKey: Review.summaryKey)
+        record.setValue(user, forKey: Review.userKey)
+        record.setValue(food, forKey: Review.foodKey)
+        record.setValue(timestamp, forKey: Review.timestampKey)
+        
+        return record
+    }
+}
+
+// MARK: - Equatable
+
+extension Review: Equatable {
+    
+    static func ==(lhs: Review, rhs: Review) -> Bool {
+        return lhs.recordID == rhs.recordID
     }
 }
