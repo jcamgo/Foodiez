@@ -12,6 +12,7 @@
         <!--Search View Controller-->
         <scene sceneID="4ej-QS-ARi">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tf8-6n-QRD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="LiF-N1-tV5" customClass="SearchViewController" customModule="Foodiez" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fxn-RO-xl9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -27,13 +28,13 @@
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tf8-6n-QRD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="260" y="153.37331334332833"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cm4-y1-K92">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pno-Kt-bcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wyZ-Ko-V6D" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fmo-Nq-8Pu">
@@ -45,7 +46,6 @@
                         <segue destination="LiF-N1-tV5" kind="relationship" relationship="rootViewController" id="AJm-Wg-JyI"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pno-Kt-bcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-484" y="152"/>
         </scene>

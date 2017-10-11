@@ -5,7 +5,7 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We want to access your location</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string></string>
+	<string>Use your location</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>CFBundleDevelopmentRegion</key>

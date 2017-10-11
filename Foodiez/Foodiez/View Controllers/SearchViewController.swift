@@ -12,10 +12,48 @@ import GooglePlaces
 class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAutocompleteViewControllerDelegate {
 
     var placesClient: GMSPlacesClient!
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
+    
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
         placesClient = GMSPlacesClient.shared()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            print(location.coordinate)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if(status == CLAuthorizationStatus.denied) {
+            showLocationDisabledPopUp()
+        }
+    }
+    
+    func showLocationDisabledPopUp() {
+        let alertController = UIAlertController(title: "Location Access Disabled", message: "In order to bring up results we need your location", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        let openAction = UIAlertAction(title: "Open Settings", style: .default) { (action) in
+            if let url = URL(string: UIApplicationOpenSettingsURLString) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+        alertController.addAction(openAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     // MARK: GOOGLE AUTO COMPLETE DELEGATE
@@ -37,10 +75,6 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate, GMSAuto
             if let error = error {
                 print("Pick Place error: \(error.localizedDescription)")
                 return
-            }
-            
-            if let PlaceLikelihoodList = PlaceLikelihoodList {
-                let place = PlaceLikelihoodList.likelihoods.first?.place
             }
         })
         
