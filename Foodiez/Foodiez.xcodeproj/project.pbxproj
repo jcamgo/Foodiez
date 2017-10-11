@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C3CEBBC0460B9CE5318B93B /* Pods_Foodiez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C65EA2B24BC56BB1A0D980 /* Pods_Foodiez.framework */; };
 		AB44EA511F8D5A150041E45E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44EA501F8D5A150041E45E /* Restaurant.swift */; };
 		AB44EA541F8D6EF30041E45E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44EA531F8D6EF30041E45E /* SearchViewController.swift */; };
 		AB8085FD1F8BECB300460585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8085FC1F8BECB300460585 /* AppDelegate.swift */; };
@@ -31,6 +32,9 @@
 		AB80863F1F8D2A2B00460585 /* Foodiez.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Foodiez.entitlements; sourceTree = "<group>"; };
 		AB8086411F8D2A2F00460585 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		AB8086431F8D394900460585 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		C0ECCEBC8F48AA0E7D08FBF2 /* Pods-Foodiez.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodiez.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foodiez/Pods-Foodiez.debug.xcconfig"; sourceTree = "<group>"; };
+		C48A3B5383F3CEA93C4A42DF /* Pods-Foodiez.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodiez.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foodiez/Pods-Foodiez.release.xcconfig"; sourceTree = "<group>"; };
+		F3C65EA2B24BC56BB1A0D980 /* Pods_Foodiez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodiez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB8086421F8D2A2F00460585 /* CloudKit.framework in Frameworks */,
+				1C3CEBBC0460B9CE5318B93B /* Pods_Foodiez.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +64,7 @@
 				AB8085FB1F8BECB300460585 /* Foodiez */,
 				AB8085FA1F8BECB300460585 /* Products */,
 				AB8086401F8D2A2F00460585 /* Frameworks */,
+				BABBC92D2A7754ABFA68C1EE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,8 +121,18 @@
 			isa = PBXGroup;
 			children = (
 				AB8086411F8D2A2F00460585 /* CloudKit.framework */,
+				F3C65EA2B24BC56BB1A0D980 /* Pods_Foodiez.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BABBC92D2A7754ABFA68C1EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0ECCEBC8F48AA0E7D08FBF2 /* Pods-Foodiez.debug.xcconfig */,
+				C48A3B5383F3CEA93C4A42DF /* Pods-Foodiez.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB80860B1F8BECB300460585 /* Build configuration list for PBXNativeTarget "Foodiez" */;
 			buildPhases = (
+				C08D33C17E93CF9286D0958B /* [CP] Check Pods Manifest.lock */,
 				AB8085F51F8BECB300460585 /* Sources */,
 				AB8085F61F8BECB300460585 /* Frameworks */,
 				AB8085F71F8BECB300460585 /* Resources */,
+				852D26460A93873B53BF95FB /* [CP] Embed Pods Frameworks */,
+				15D485BF1C1253B3BBE3C2CD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +212,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15D485BF1C1253B3BBE3C2CD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Foodiez/Pods-Foodiez-resources.sh",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Foodiez/Pods-Foodiez-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		852D26460A93873B53BF95FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Foodiez/Pods-Foodiez-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C08D33C17E93CF9286D0958B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Foodiez-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AB8085F51F8BECB300460585 /* Sources */ = {
@@ -338,9 +411,10 @@
 		};
 		AB80860C1F8BECB300460585 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0ECCEBC8F48AA0E7D08FBF2 /* Pods-Foodiez.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Foodiez/Foodiez.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Foodiez/Resources/Foodiez.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FAFF4GC6NK;
 				INFOPLIST_FILE = "$(SRCROOT)/Foodiez/Resources/Info.plist";
@@ -354,9 +428,10 @@
 		};
 		AB80860D1F8BECB300460585 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C48A3B5383F3CEA93C4A42DF /* Pods-Foodiez.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Foodiez/Foodiez.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Foodiez/Resources/Foodiez.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FAFF4GC6NK;
 				INFOPLIST_FILE = "$(SRCROOT)/Foodiez/Resources/Info.plist";
