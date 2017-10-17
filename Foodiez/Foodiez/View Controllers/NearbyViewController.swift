@@ -9,8 +9,10 @@
 import UIKit
 import CloudKit
 
-class NearbyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NearbyViewController: UIViewController, UITableViewDelegate , UITableViewDataSource {
 
+    var menuItems = [MenuItem]()
+    
     @IBOutlet weak var nearbyTableView: UITableView!
     
     var foodReviewsArrayofDictionaries = [[String: Any]]()
@@ -23,12 +25,29 @@ class NearbyViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     // MARK: - TableView Data Source
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return menuItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! Le
+
+        let cellIdentifier = "NearbyTableViewCell"
         
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? NearbyTableViewCell else {
+            fatalError("The dequed cell id not an instance of NearbyTableViewCell.")
+        }
+        
+        let menuItem = menuItems[indexPath.row]
+        
+        cell.foodNameLabel.text = menuItem.name
+        cell.photImageView.image = menuItem.photo
+        cell.restaurantNameLabel.text = menuItem.restaurant
+        cell.ratingControl.rating = menuItem.rating
+        
+        return cell
     }
 }

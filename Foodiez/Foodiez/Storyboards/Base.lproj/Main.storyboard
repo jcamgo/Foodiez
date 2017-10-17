@@ -1,36 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wyZ-Ko-V6D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7TH-EU-Mbf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller-->
-        <scene sceneID="4ej-QS-ARi">
-            <objects>
-                <viewController id="LiF-N1-tV5" customClass="SearchViewController" customModule="Foodiez" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fxn-RO-xl9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="wry-b7-u0l"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Etd-TA-4R0">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="aHY-et-jUZ">
-                            <connections>
-                                <action selector="openSearchPlace:" destination="LiF-N1-tV5" id="1gt-fF-eOd"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tf8-6n-QRD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-753" y="-107"/>
-        </scene>
         <!--Add Review-->
         <scene sceneID="wYz-oS-tj4">
             <objects>
@@ -41,11 +19,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="9ev-Le-tqB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Review" id="vmE-gn-6z1"/>
+                    <tabBarItem key="tabBarItem" title="Add Review" image="PlusIcon" id="vmE-gn-6z1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTU-hO-6em" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="803" y="290"/>
+            <point key="canvasLocation" x="802" y="370"/>
         </scene>
         <!--Search-->
         <scene sceneID="64t-8j-2B5">
@@ -57,7 +35,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="HwM-C2-LUj"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" id="7vb-Fb-06q"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="SearchIcon" id="7vb-Fb-06q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vqs-aP-Ice" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,11 +53,11 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="115" id="vYb-7d-Gnc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NearbyCell" rowHeight="115" id="vYb-7d-Gnc" customClass="NearbyTableViewCell" customModule="Foodiez" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="115"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vYb-7d-Gnc" id="RV5-we-5wp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="114.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6gy-7o-jOH">
@@ -97,8 +75,21 @@
                                                     <rect key="frame" x="111" y="29" width="256" height="49"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDC-ee-RGb">
+                                                    <rect key="frame" x="130" y="84" width="133" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="foodNameLabel" destination="PDC-ee-RGb" id="Gwn-e6-C75"/>
+                                            <outlet property="photImageView" destination="6gy-7o-jOH" id="nKU-dd-oYw"/>
+                                            <outlet property="ratingControl" destination="3vR-l1-VCu" id="Ful-lA-V3x"/>
+                                            <outlet property="restaurantNameLabel" destination="kL5-lV-XE0" id="vgU-oC-WZj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -112,7 +103,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SMe-km-YqK"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Nearby" id="yPz-Ie-6Z0"/>
+                    <tabBarItem key="tabBarItem" title="Nearby" image="NewsIcon" id="yPz-Ie-6Z0"/>
                     <connections>
                         <outlet property="nearbyTableView" destination="TdZ-td-qEl" id="OEx-iX-EM8"/>
                         <outlet property="searchDisplayController" destination="Nvu-Fa-EnX" id="ymS-bp-5Im"/>
@@ -149,23 +140,10 @@
             </objects>
             <point key="canvasLocation" x="-74" y="-65"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="cm4-y1-K92">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wyZ-Ko-V6D" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fmo-Nq-8Pu">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="LiF-N1-tV5" kind="relationship" relationship="rootViewController" id="AJm-Wg-JyI"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pno-Kt-bcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1519" y="-107"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="NewsIcon" width="25" height="25"/>
+        <image name="PlusIcon" width="25" height="25"/>
+        <image name="SearchIcon" width="25" height="25"/>
+    </resources>
 </document>
