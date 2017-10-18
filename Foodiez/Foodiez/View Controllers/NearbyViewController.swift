@@ -45,7 +45,7 @@ class NearbyViewController: UIViewController, UITableViewDelegate , UITableViewD
         
         cell.foodNameLabel.text = menuItem.name
         cell.photImageView.image = menuItem.photo
-        cell.restaurantNameLabel.text = menuItem.restaurant
+        //cell.restaurantNameLabel.text = menuItem.restaurant
         cell.ratingControl.rating = menuItem.rating
         
         return cell
