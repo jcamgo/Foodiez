@@ -8,6 +8,7 @@
 
 import UIKit
 import CloudKit
+import CoreLocation
 
 class NearbyViewController: UIViewController, UITableViewDelegate , UITableViewDataSource {
 

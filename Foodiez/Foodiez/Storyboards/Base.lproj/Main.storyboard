@@ -17,47 +17,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O0m-i5-neu">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O0m-i5-neu">
                                 <rect key="frame" x="67" y="100" width="240" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Restaurant Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V6S-6x-eFf">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Restaurant Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V6S-6x-eFf">
                                 <rect key="frame" x="67" y="157" width="240" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WXf-8I-u6g" customClass="RatingControl" customModule="Foodiez" customModuleProvider="target">
-                                <rect key="frame" x="16" y="209" width="343" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="WXf-8I-u6g" customClass="RatingControl" customModule="Foodiez" customModuleProvider="target">
+                                <rect key="frame" x="67" y="209" width="240" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GPL-w6-TzE"/>
+                                </constraints>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fLb-ff-ItU">
-                                <rect key="frame" x="67" y="264" width="240" height="246"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fLb-ff-ItU">
+                                <rect key="frame" x="67" y="270" width="240" height="245"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="245" id="dFy-bQ-hiv"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8U-9a-BlR">
-                                <rect key="frame" x="67" y="518" width="240" height="30"/>
+                                <rect key="frame" x="67" y="548" width="240" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="Submit">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WXf-8I-u6g" firstAttribute="leading" secondItem="9ev-Le-tqB" secondAttribute="leading" constant="67" id="0to-3T-ua1"/>
+                            <constraint firstItem="fLb-ff-ItU" firstAttribute="top" secondItem="WXf-8I-u6g" secondAttribute="bottom" constant="11" id="4Rd-fg-pYD"/>
+                            <constraint firstItem="9ev-Le-tqB" firstAttribute="trailing" secondItem="V6S-6x-eFf" secondAttribute="trailing" constant="68" id="4en-58-IQX"/>
+                            <constraint firstItem="O0m-i5-neu" firstAttribute="top" secondItem="9ev-Le-tqB" secondAttribute="top" constant="80" id="HTi-kk-wLj"/>
+                            <constraint firstItem="9ev-Le-tqB" firstAttribute="trailing" secondItem="O0m-i5-neu" secondAttribute="trailing" constant="68" id="P8a-Py-E1c"/>
+                            <constraint firstItem="9ev-Le-tqB" firstAttribute="trailing" secondItem="WXf-8I-u6g" secondAttribute="trailing" constant="68" id="avW-z0-2Cj"/>
+                            <constraint firstItem="9ev-Le-tqB" firstAttribute="trailing" secondItem="fLb-ff-ItU" secondAttribute="trailing" constant="68" id="cez-3S-UuY"/>
+                            <constraint firstItem="fLb-ff-ItU" firstAttribute="leading" secondItem="9ev-Le-tqB" secondAttribute="leading" constant="67" id="cnV-4I-Yo7"/>
+                            <constraint firstItem="O0m-i5-neu" firstAttribute="leading" secondItem="9ev-Le-tqB" secondAttribute="leading" constant="67" id="hvz-J7-HTj"/>
+                            <constraint firstItem="V6S-6x-eFf" firstAttribute="top" secondItem="O0m-i5-neu" secondAttribute="bottom" constant="27" id="p8f-ra-tu8"/>
+                            <constraint firstItem="WXf-8I-u6g" firstAttribute="top" secondItem="V6S-6x-eFf" secondAttribute="bottom" constant="22" id="vgx-Qx-f7b"/>
+                            <constraint firstItem="V6S-6x-eFf" firstAttribute="leading" secondItem="9ev-Le-tqB" secondAttribute="leading" constant="67" id="xa7-Xe-Ts4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9ev-Le-tqB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Review" image="PlusIcon" id="vmE-gn-6z1">
-                        <color key="badgeColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Add Review" image="PlusIcon" id="vmE-gn-6z1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTU-hO-6em" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,9 +88,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="HwM-C2-LUj"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" image="SearchIcon" id="7vb-Fb-06q">
-                        <color key="badgeColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Search" image="SearchIcon" id="7vb-Fb-06q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vqs-aP-Ice" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,7 +124,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3vR-l1-VCu" customClass="RatingControl" customModule="Foodiez" customModuleProvider="target">
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3vR-l1-VCu" customClass="RatingControl" customModule="Foodiez" customModuleProvider="target">
                                                     <rect key="frame" x="111" y="29" width="256" height="49"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </stackView>
@@ -143,9 +156,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SMe-km-YqK"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Nearby" image="NewsIcon" id="yPz-Ie-6Z0">
-                        <color key="badgeColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Nearby" image="NewsIcon" id="yPz-Ie-6Z0"/>
                     <connections>
                         <outlet property="nearbyTableView" destination="TdZ-td-qEl" id="OEx-iX-EM8"/>
                         <outlet property="searchDisplayController" destination="Nvu-Fa-EnX" id="ymS-bp-5Im"/>

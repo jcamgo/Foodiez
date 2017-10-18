@@ -17,8 +17,8 @@ class SearchViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.locationManager.requestAlwaysAuthorization()
         self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.requestAlwaysAuthorization()
 
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
