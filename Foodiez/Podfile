@@ -6,5 +6,6 @@ target 'Foodiez' do
 
   # Pods for Foodiez
   pod 'GooglePlaces', '~> 2.4'
+  pod 'GoogleMaps', '~> 2.4'
 
 end

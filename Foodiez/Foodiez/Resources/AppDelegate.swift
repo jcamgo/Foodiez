@@ -8,6 +8,7 @@
 
 import UIKit
 import GooglePlaces
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        GMSServices.provideAPIKey("AIzaSyBBLBE26psRhgVDYstL29wYbDBbr52iKcA")
         GMSPlacesClient.provideAPIKey("AIzaSyBBLBE26psRhgVDYstL29wYbDBbr52iKcA")
         let filter = GMSAutocompleteFilter()
         filter.type = .establishment
