@@ -104,13 +104,10 @@
                     <navigationItem key="navigationItem" id="yWi-Px-OH5">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="F8K-ph-fcS">
                             <connections>
-                                <action selector="searchBarButtonTapped:" destination="17K-iM-6SR" id="dSt-WS-k5X"/>
+                                <action selector="searchButtonTapped:" destination="17K-iM-6SR" id="uj2-6T-1h6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="googleMapsView" destination="OBA-2q-mKf" id="TJJ-uc-74O"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vqs-aP-Ice" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
