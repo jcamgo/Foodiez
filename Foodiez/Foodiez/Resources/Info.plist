@@ -6,6 +6,8 @@
 	<string></string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>To get places near your location.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Foodiez needs your location to find nearby food</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

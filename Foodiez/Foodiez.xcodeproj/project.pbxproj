@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1C3CEBBC0460B9CE5318B93B /* Pods_Foodiez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C65EA2B24BC56BB1A0D980 /* Pods_Foodiez.framework */; };
+		AB2C05481FA0FC4000C98EA4 /* AddMenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2C05471FA0FC4000C98EA4 /* AddMenuItemViewController.swift */; };
+		AB2C054B1FA1004600C98EA4 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2C054A1FA1004600C98EA4 /* CloudKitManager.swift */; };
 		AB2C894E1F91573200C9367C /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2C894D1F91573200C9367C /* NearbyViewController.swift */; };
 		AB2C89501F95027F00C9367C /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2C894F1F95027F00C9367C /* RatingControl.swift */; };
+		AB3E28361F9E93F3000F1ED6 /* MenuItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E28351F9E93F3000F1ED6 /* MenuItemController.swift */; };
 		AB44EA511F8D5A150041E45E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44EA501F8D5A150041E45E /* Restaurant.swift */; };
 		AB44EA541F8D6EF30041E45E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44EA531F8D6EF30041E45E /* SearchViewController.swift */; };
 		AB8085FD1F8BECB300460585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8085FC1F8BECB300460585 /* AppDelegate.swift */; };
@@ -23,8 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB2C05471FA0FC4000C98EA4 /* AddMenuItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMenuItemViewController.swift; sourceTree = "<group>"; };
+		AB2C054A1FA1004600C98EA4 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		AB2C894D1F91573200C9367C /* NearbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
 		AB2C894F1F95027F00C9367C /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		AB3E28351F9E93F3000F1ED6 /* MenuItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemController.swift; sourceTree = "<group>"; };
 		AB44EA501F8D5A150041E45E /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		AB44EA531F8D6EF30041E45E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		AB8085F91F8BECB300460585 /* Foodiez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodiez.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +62,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB2C05491FA0FFEB00C98EA4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AB2C054A1FA1004600C98EA4 /* CloudKitManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AB3E28341F9E93D1000F1ED6 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB3E28351F9E93F3000F1ED6 /* MenuItemController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
 		AB44EA521F8D6ECC0041E45E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +85,7 @@
 				AB2C894D1F91573200C9367C /* NearbyViewController.swift */,
 				AB2C894F1F95027F00C9367C /* RatingControl.swift */,
 				ABACCBB31F956903009B64C0 /* NearbyTableViewCell.swift */,
+				AB2C05471FA0FC4000C98EA4 /* AddMenuItemViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -88,8 +111,10 @@
 		AB8085FB1F8BECB300460585 /* Foodiez */ = {
 			isa = PBXGroup;
 			children = (
+				AB2C05491FA0FFEB00C98EA4 /* Helpers */,
 				AB44EA521F8D6ECC0041E45E /* View Controllers */,
 				AB80863C1F8D27F500460585 /* Models */,
+				AB3E28341F9E93D1000F1ED6 /* Model Controllers */,
 				AB80863B1F8D27E500460585 /* Storyboards */,
 				AB80863A1F8D27B700460585 /* Resources */,
 			);
@@ -283,12 +308,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABACCBB41F956903009B64C0 /* NearbyTableViewCell.swift in Sources */,
+				AB2C054B1FA1004600C98EA4 /* CloudKitManager.swift in Sources */,
 				AB2C89501F95027F00C9367C /* RatingControl.swift in Sources */,
 				AB44EA541F8D6EF30041E45E /* SearchViewController.swift in Sources */,
+				AB2C05481FA0FC4000C98EA4 /* AddMenuItemViewController.swift in Sources */,
 				AB44EA511F8D5A150041E45E /* Restaurant.swift in Sources */,
 				AB8086441F8D394900460585 /* MenuItem.swift in Sources */,
 				AB8085FD1F8BECB300460585 /* AppDelegate.swift in Sources */,
 				AB80863E1F8D283200460585 /* Review.swift in Sources */,
+				AB3E28361F9E93F3000F1ED6 /* MenuItemController.swift in Sources */,
 				AB2C894E1F91573200C9367C /* NearbyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
